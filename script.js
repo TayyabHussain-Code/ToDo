@@ -17,8 +17,8 @@ function displayTodos() {
         } else {
             checked = '';
         }
-        const moveUpClass = index === 0 ? 'disabled' : ''; // Disable move up icon if it's the first item
-        const moveDownClass = index === todos.length - 1 ? 'disabled' : ''; // Disable move down icon if it's the last item
+        const moveUpClass = index === 0 ? 'disabled' : ''; 
+        const moveDownClass = index === todos.length - 1 ? 'disabled' : ''; 
 
         const todoItemHTML = `
              <div id="todo-item-${index}" class="todo-item">
@@ -93,7 +93,7 @@ function moveTodoItem(index, direction) {
     updateLocalStorage();
     displayTodos();
 }
-//update Local Storage 
+
 function updateLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
